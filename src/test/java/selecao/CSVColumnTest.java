@@ -8,9 +8,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.console.dao.CSVColumn;
-import app.console.dao.interfaces.ICSVColumn;
-import app.console.dao.interfaces.IDaoCSV;
+import app.involves.dao.CSVColumn;
+import app.involves.dao.interfaces.ICSVColumn;
+import app.involves.dao.interfaces.IDaoCSV;
 
 public class CSVColumnTest {
 	@Mock

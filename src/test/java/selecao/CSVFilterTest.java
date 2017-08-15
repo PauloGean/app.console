@@ -12,10 +12,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.console.dao.CSVFilter;
-import app.console.dao.interfaces.ICSVFilter;
-import app.console.dao.interfaces.IDaoCSV;
-import app.console.exceptions.ReaderFileException;
+import app.involves.dao.CSVFilter;
+import app.involves.dao.interfaces.ICSVFilter;
+import app.involves.dao.interfaces.IDaoCSV;
+import app.involves.exceptions.ReaderFileException;
 
 public class CSVFilterTest {
 	@Mock

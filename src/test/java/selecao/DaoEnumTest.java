@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import app.console.dao.CityDao;
-import app.console.model.DaoEnum;
+import app.involves.dao.CityDao;
+import app.involves.model.DaoEnum;
 
 public class DaoEnumTest {
 	@Test

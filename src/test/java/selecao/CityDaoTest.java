@@ -10,8 +10,8 @@ import org.junit.Test;
 import org.mockito.MockSettings;
 import org.mockito.Mockito;
 
-import app.console.dao.CityDao;
-import app.console.exceptions.ReaderFileException;
+import app.involves.dao.CityDao;
+import app.involves.exceptions.ReaderFileException;
 
 public class CityDaoTest {
 	

@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import app.console.cmd.controller.Count;
-import app.console.model.ComandsEnum;
+import app.involves.cmd.controller.Count;
+import app.involves.model.ComandsEnum;
 
 public class ComandsTest {
 	@Test
