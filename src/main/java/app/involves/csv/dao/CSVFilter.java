@@ -1,4 +1,4 @@
-package app.involves.dao;
+package app.involves.csv.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import app.involves.dao.interfaces.ICSVColumn;
 import app.involves.dao.interfaces.ICSVFilter;
 import app.involves.dao.interfaces.IDaoCSV;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class CSVFilter implements ICSVFilter {
 	private IDaoCSV daoCSV;
@@ -18,7 +18,7 @@ public class CSVFilter implements ICSVFilter {
 	}
 
 	@Override
-	public List<String> filter(String field, String value) throws ReaderFileException {
+	public List<String> filter(String field, String value) throws ConsultDatesException {
 		int column = icsvColumn.getIndexColumn(field);
 		List<String> list = new ArrayList<String>();
 		for (String line : daoCSV.getLines()) {

@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.dao.CSVCount;
+import app.involves.csv.dao.CSVCount;
 import app.involves.dao.interfaces.ICSVCount;
 import app.involves.dao.interfaces.IDaoCSV;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class CSVCountTest {
 	@Mock
@@ -23,7 +23,7 @@ public class CSVCountTest {
 	private ICSVCount icsvCount;
 
 	@Before
-	public void init() throws ReaderFileException {
+	public void init() throws ConsultDatesException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(daoCSV.getHeader()).thenReturn("id,uf,city");
 		Mockito.when(daoCSV.getSeparator()).thenReturn(",");
@@ -41,7 +41,7 @@ public class CSVCountTest {
 	}
 
 	@Test
-	public void countTest() throws ReaderFileException {
+	public void countTest() throws ConsultDatesException {
 
 		assertEquals(4, icsvCount.count());
 

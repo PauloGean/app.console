@@ -1,4 +1,4 @@
-package app.involves.dao;
+package app.involves.csv.dao;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 import app.involves.dao.interfaces.ICSVColumn;
 import app.involves.dao.interfaces.ICSVCountDistinct;
 import app.involves.dao.interfaces.IDaoCSV;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class CSVCountDistinct implements ICSVCountDistinct {
 	private IDaoCSV daoCSV;
@@ -18,7 +18,7 @@ public class CSVCountDistinct implements ICSVCountDistinct {
 	}
 
 	@Override
-	public long countDistinct(String field) throws ReaderFileException {
+	public long countDistinct(String field) throws ConsultDatesException {
 		int column = icsvColumn.getIndexColumn(field);
 		Set<String> set = new HashSet<String>();
 		for (String line : this.daoCSV.getLines()) {

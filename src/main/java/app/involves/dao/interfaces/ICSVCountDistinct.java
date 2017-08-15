@@ -1,7 +1,7 @@
 package app.involves.dao.interfaces;
 
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public interface ICSVCountDistinct {
-	public long countDistinct(String field) throws ReaderFileException ;
+	public long countDistinct(String field) throws ConsultDatesException ;
 }

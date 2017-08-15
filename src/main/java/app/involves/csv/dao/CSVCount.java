@@ -1,8 +1,8 @@
-package app.involves.dao;
+package app.involves.csv.dao;
 
 import app.involves.dao.interfaces.ICSVCount;
 import app.involves.dao.interfaces.IDaoCSV;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class CSVCount implements ICSVCount {
 	private IDaoCSV daoCSV;
@@ -12,7 +12,7 @@ public class CSVCount implements ICSVCount {
 	}
 
 	@Override
-	public long count() throws ReaderFileException {
+	public long count() throws ConsultDatesException {
 		long count = 0;
 		for (String line : this.daoCSV.getLines()) {
 			if (line.contains(this.daoCSV.getHeader())) {

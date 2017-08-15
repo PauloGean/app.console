@@ -2,7 +2,7 @@ package app.involves.view;
 
 import java.util.Scanner;
 
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 import app.involves.model.ComandsEnum;
 import app.involves.model.DaoEnum;
 import app.involves.view.interfaces.IView;
@@ -39,7 +39,7 @@ public class Console implements IView {
 				try {
 					comandEnum.getiComand().exec(input,daoEnum.CITY.getDao());
 					Console.clear();
-				} catch (ReaderFileException e) {
+				} catch (ConsultDatesException e) {
 					write(e.getMessage());
 				}
 				

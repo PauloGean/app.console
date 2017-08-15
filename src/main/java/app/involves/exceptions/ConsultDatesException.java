@@ -1,13 +1,13 @@
 package app.involves.exceptions;
 
-public class ReaderFileException extends Exception {
+public class ConsultDatesException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-    public ReaderFileException(String file,Throwable throwable)
+    public ConsultDatesException(String file,Throwable throwable)
     {
       super(String.format("Erro ao ler o arquivo: %s", file),throwable);
     }

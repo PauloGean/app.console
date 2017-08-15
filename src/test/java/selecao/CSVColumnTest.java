@@ -8,7 +8,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.dao.CSVColumn;
+import app.involves.csv.dao.CSVColumn;
 import app.involves.dao.interfaces.ICSVColumn;
 import app.involves.dao.interfaces.IDaoCSV;
 

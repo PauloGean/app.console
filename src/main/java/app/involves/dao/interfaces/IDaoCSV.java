@@ -3,11 +3,11 @@ package app.involves.dao.interfaces;
 import java.io.File;
 import java.util.List;
 
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public interface IDaoCSV {
 	
-	public List<String> getLines() throws ReaderFileException  ;
+	public List<String> getLines() throws ConsultDatesException  ;
 	
 	public  String getSeparator();
 

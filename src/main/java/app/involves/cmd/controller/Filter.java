@@ -4,11 +4,11 @@ import java.util.List;
 
 import app.involves.controller.IComand;
 import app.involves.dao.interfaces.IDao;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class Filter implements IComand {
 	@Override
-	public void exec(String comand,IDao dao) throws ReaderFileException {
+	public void exec(String comand,IDao dao) throws ConsultDatesException {
 		String[] comands=comand.split(" ");
 		String field=comands[1];
 		String value=comands[2];

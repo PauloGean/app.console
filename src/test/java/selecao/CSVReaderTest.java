@@ -12,10 +12,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.dao.CSVReader;
+import app.involves.csv.dao.CSVReader;
 import app.involves.dao.interfaces.ICSVReader;
 import app.involves.dao.interfaces.IDaoCSV;
-import app.involves.exceptions.ReaderFileException;
+import app.involves.exceptions.ConsultDatesException;
 
 public class CSVReaderTest {
 	@Mock
@@ -32,7 +32,7 @@ public class CSVReaderTest {
 	}
 
 	@Test
-	public void getLinesTest()  throws ReaderFileException  {
+	public void getLinesTest()  throws ConsultDatesException  {
 
 		List<String> lines = reader.getLines();
 		assertEquals(11, lines.size());
@@ -41,8 +41,8 @@ public class CSVReaderTest {
 		assertTrue(contains);
 	}
 
-	@Test(expected = ReaderFileException.class)
-	public void getLinesTestNotFoundFile() throws ReaderFileException  {
+	@Test(expected = ConsultDatesException.class)
+	public void getLinesTestNotFoundFile() throws ConsultDatesException  {
 		Mockito.when(daoCSV.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/notfile.csv"));
 
 		List<String> lines = reader.getLines();
