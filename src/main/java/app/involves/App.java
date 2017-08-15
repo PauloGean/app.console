@@ -1,5 +1,6 @@
 package app.involves;
 
+import app.involves.controller.IController;
 import app.involves.model.ViewsEnum;
 import app.involves.view.CityView;
 import app.involves.view.Console;
@@ -30,11 +31,9 @@ public class App {
 			iViewIO.write(viewsEnum.getTitle());
 		}
 		String file=iViewIO.getInput();
-		IView iView=ViewsEnum.CITY.getView();
-		iView.setViewIO(iViewIO);
-		iView.initView();
-		
-		//new CityView(new Console()).init();
+		IController controller=ViewsEnum.CITY.getController();
+		controller.initView();
+
 	}
 
 }

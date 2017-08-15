@@ -1,25 +1,25 @@
 package app.involves.model;
 
-import app.involves.view.CityView;
-import app.involves.view.interfaces.IView;
+import app.involves.controller.CityController;
+import app.involves.controller.IController;
 
 public enum ViewsEnum {
-	CITY("Cidades",new CityView());
+	CITY("Cidades", new CityController());
 
-	private IView view;
+	private IController controller;
 	private String title;
 
-	private ViewsEnum(String title,IView iView) {
-		this.view = iView;
-		this.title= title;
-	}
-
-	public IView getView() {
-		return view;
+	private ViewsEnum(String title, IController controller) {
+		this.controller = controller;
+		this.title = title;
 	}
 
 	public String getTitle() {
 		return title;
+	}
+
+	public IController getController() {
+		return controller;
 	}
 
 }

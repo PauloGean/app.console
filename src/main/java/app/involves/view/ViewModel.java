@@ -1,9 +1,11 @@
 package app.involves.view;
 
 import app.involves.controller.ComandsSelector;
+import app.involves.controller.IController;
 import app.involves.dao.interfaces.IDao;
 import app.involves.exceptions.ConsultDatesException;
 import app.involves.model.ComandsEnum;
+import app.involves.view.interfaces.IView;
 import app.involves.view.interfaces.IViewIO;
 
 public class ViewModel {
@@ -23,18 +25,20 @@ public class ViewModel {
 		System.out.print(CMD);
 	}
 
-	public void waitCommand(IViewIO view, IDao dao) {
+	public void waitCommand(IController controller) {
+		IView view=controller.getView();
+		IDao dao=controller.getDao();
 		for (;;) {
-			header(view);
-			String input = view.getInput();
+			header(view.getViewIO());
+			String input = view.getViewIO().getInput();
 			if (input.trim().equalsIgnoreCase(EXIT)) {
 				break;
 			}
 			ComandsEnum comandEnum = ComandsSelector.getComandEnum(input);
 			if (comandEnum == null) {
-				view.write(COMANDO_INVALIDO);
+				view.getViewIO().write(COMANDO_INVALIDO);
 			} else {
-				executeComand(view, dao, input, comandEnum);
+				executeComand(view.getViewIO(), dao, input, comandEnum);
 			}
 		}
 	}

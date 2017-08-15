@@ -4,13 +4,13 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import app.involves.controller.CityController;
 import app.involves.model.ViewsEnum;
-import app.involves.view.CityView;
 
 public class ViewEnumTest {
 	@Test
 	public void daoEnumTest() {
 		
-	assertTrue(CityView.class.isInstance(ViewsEnum.CITY.getView()));	
+	assertTrue(CityController.class.isInstance(ViewsEnum.CITY.getController()));	
 	}
 }
