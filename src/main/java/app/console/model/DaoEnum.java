@@ -1,7 +1,7 @@
 package app.console.model;
 
 import app.console.dao.CityDao;
-import app.console.dao.IDao;
+import app.console.dao.interfaces.IDao;
 
 public enum DaoEnum {
 	CITY(new CityDao());

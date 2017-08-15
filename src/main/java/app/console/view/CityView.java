@@ -1,29 +1,16 @@
 package app.console.view;
 
-import java.util.Scanner;
-
-import app.console.model.ComandsEnum;
 import app.console.model.DaoEnum;
+import app.console.view.interfaces.IView;
 
 public class CityView {
-	private static final String COMANDO_INVALIDO = "Comando inválido!";
-
+	private IView view;
+	public CityView(IView view) {
+		this.view=view;
+	}
 	
 	public void init() {
-		Scanner read = new Scanner(System.in);
-
-		for (;;) {
-			Console.header();
-			String input = read.nextLine();
-			ComandsEnum  comandEnum=ComandsEnum.getComandEnum(input);
-			if(comandEnum==null) {
-				System.out.println(COMANDO_INVALIDO);
-			}else {
-				comandEnum.getiComand().exec(input,DaoEnum.CITY.getDao());
-				Console.clear();
-			}
-
-		}
+		view.initView(DaoEnum.CITY);
 	}
 
 

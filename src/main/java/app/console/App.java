@@ -1,6 +1,7 @@
 package app.console;
 
 import app.console.view.CityView;
+import app.console.view.Console;
 
 /**
  *
@@ -17,7 +18,7 @@ import app.console.view.CityView;
 public class App {
 
 	public static void main(String[] args) {
-		new CityView().init();
+		new CityView(new Console()).init();
 	}
 
 }
