@@ -5,11 +5,11 @@ import java.util.List;
 import app.involves.controller.IComand;
 import app.involves.dao.interfaces.IDao;
 import app.involves.exceptions.ConsultDatesException;
-import app.involves.view.interfaces.IView;
+import app.involves.view.interfaces.IViewIO;
 
 public class Filter implements IComand {
 	@Override
-	public void exec(String comand,IView iView,IDao dao) throws ConsultDatesException {
+	public void exec(String comand,IViewIO iView,IDao dao) throws ConsultDatesException {
 		String[] comands=comand.split(" ");
 		String field=comands[1];
 		String value=comands[2];

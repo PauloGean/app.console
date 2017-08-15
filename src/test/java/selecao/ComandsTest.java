@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import app.involves.cmd.controller.Count;
+import app.involves.controller.ComandsSelector;
 import app.involves.model.ComandsEnum;
 
 public class ComandsTest {
@@ -15,7 +16,7 @@ public class ComandsTest {
 		boolean ok = "count *".matches(ComandsEnum.COUNT.getRegex());
 		assertTrue(ok);
 		
-		ComandsEnum comandsEnum=	ComandsEnum.getComandEnum("count *");
+		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("count *");
 		assertEquals(ComandsEnum.COUNT, comandsEnum);
 		assertEquals(ComandsEnum.COUNT.getLabel(), comandsEnum.getLabel());
 		assertEquals(ComandsEnum.COUNT.getRegex(), comandsEnum.getRegex());
@@ -27,7 +28,7 @@ public class ComandsTest {
 	public void comandDistinctTest() {
 		boolean ok = "count distinct a".matches(ComandsEnum.COUNT_DISTINC.getRegex());
 		assertTrue(ok);
-		ComandsEnum comandsEnum=	ComandsEnum.getComandEnum("count distinct capital");
+		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("count distinct capital");
 		assertEquals(ComandsEnum.COUNT_DISTINC, comandsEnum);
 	}
 
@@ -35,14 +36,14 @@ public class ComandsTest {
 	public void filterTest() {
 		boolean ok = "filter a a".matches(ComandsEnum.FILTER.getRegex());
 		assertTrue(ok);
-		ComandsEnum comandsEnum=	ComandsEnum.getComandEnum("filter capital true");
+		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("filter capital true");
 		assertEquals(ComandsEnum.FILTER, comandsEnum);
 	}
 	
 	@Test
 	public void noComandTest() {
 
-		ComandsEnum comandsEnum=	ComandsEnum.getComandEnum("aa aa aa");
+		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("aa aa aa");
 		assertNull(comandsEnum);
 	}
 

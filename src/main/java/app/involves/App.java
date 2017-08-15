@@ -1,7 +1,10 @@
 package app.involves;
 
+import app.involves.model.ViewsEnum;
 import app.involves.view.CityView;
 import app.involves.view.Console;
+import app.involves.view.interfaces.IView;
+import app.involves.view.interfaces.IViewIO;
 
 /**
  *
@@ -16,9 +19,22 @@ import app.involves.view.Console;
  */
 
 public class App {
+	
+	
 
 	public static void main(String[] args) {
-		new CityView(new Console()).init();
+		IViewIO iViewIO=new Console();
+		ViewsEnum[] enums=ViewsEnum.values();
+		iViewIO.write("Informe um arquivo para leitura");
+		for (ViewsEnum viewsEnum : enums) {
+			iViewIO.write(viewsEnum.getTitle());
+		}
+		String file=iViewIO.getInput();
+		IView iView=ViewsEnum.CITY.getView();
+		iView.setViewIO(iViewIO);
+		iView.initView();
+		
+		//new CityView(new Console()).init();
 	}
 
 }
