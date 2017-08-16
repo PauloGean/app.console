@@ -1,9 +1,7 @@
 package br.involves;
 
 import br.involves.api.controller.IController;
-import br.involves.api.view.IView;
 import br.involves.api.view.IViewIO;
-import br.involves.impl.view.CityView;
 import br.involves.impl.view.Console;
 import br.involves.model.enums.ControllersEnum;
 
