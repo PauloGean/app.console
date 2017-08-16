@@ -44,7 +44,7 @@ public class CSVReaderTest {
 	public void getLinesTestNotFoundFile() throws DataQueryException  {
 		Mockito.when(daoCSV.getDirectory()).thenReturn("acidades.csv");
 
-		List<String> lines = reader.getLines();
+		reader.getLines();
 
 	}
 }
