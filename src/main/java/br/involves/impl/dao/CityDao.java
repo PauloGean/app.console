@@ -1,6 +1,5 @@
 package br.involves.impl.dao;
 
-import java.io.File;
 import java.util.List;
 
 import br.involves.api.csv.dao.IDaoCSV;
@@ -24,8 +23,8 @@ public class CityDao implements IDao,IDaoCSV {
 	}
 
 	@Override
-	public File getDirectory() {
-		return new File("../selecao/src/main/resources/cidades/cidades.csv");
+	public String getDirectory() {
+		return "cidades.csv";
 	}
 
 	@Override

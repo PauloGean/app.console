@@ -20,20 +20,20 @@ public class CityDaoTest {
 		CityDao cityDao=new CityDao();
 		assertEquals("ibge_id,uf,name,capital,lon,lat,no_accents,alternative_names,microregion,mesoregion",cityDao.getHeader());
 		assertEquals(",",cityDao.getSeparator());
-		assertTrue(cityDao.getDirectory().exists());
+	
 
 
 	}
 	@Test
 	public void countTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
-		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
+		Mockito.when(cityDao.getDirectory()).thenReturn("cidades.csv");
 		assertEquals(10, cityDao.count());
 	}
 	@Test
 	public void countDistinctTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
-		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
+		Mockito.when(cityDao.getDirectory()).thenReturn("cidades.csv");
 		assertEquals(1, cityDao.countDistinct("uf"));
 		assertEquals(10, cityDao.countDistinct("name"));
 	}
@@ -41,7 +41,7 @@ public class CityDaoTest {
 	@Test
 	public void filterTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
-		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
+		Mockito.when(cityDao.getDirectory()).thenReturn("cidades.csv");
 		assertEquals(10, cityDao.filter("uf", "RO").size());
 		assertEquals(1, cityDao.filter("name", "Cabixi").size());
 	}

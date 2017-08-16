@@ -13,6 +13,6 @@ public interface IDaoCSV {
 
 	public  String getHeader();
 	
-	public  File getDirectory();
+	public  String getDirectory();
 
 }

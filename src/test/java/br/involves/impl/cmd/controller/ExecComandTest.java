@@ -2,8 +2,6 @@ package br.involves.impl.cmd.controller;
 
 import static org.mockito.Mockito.mock;
 
-import java.io.File;
-
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -15,7 +13,7 @@ public class ExecComandTest {
 	@Test
 	public void executeTest() {
 		CityDao cityDao = mock(CityDao.class, Mockito.CALLS_REAL_METHODS);
-		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
+		Mockito.when(cityDao.getDirectory()).thenReturn("cidades.csv");
 		new ExecComand().execute(new CityView(), cityDao, "count *", ComandsEnum.COUNT);
 		new ExecComand().execute(new CityView(), cityDao, "filter capital true", ComandsEnum.FILTER);
 		new ExecComand().execute(new CityView(), cityDao, "count distinct capital", ComandsEnum.COUNT);
@@ -25,7 +23,7 @@ public class ExecComandTest {
 	@Test
 	public void executeTestNoQuery() {
 		CityDao cityDao = mock(CityDao.class, Mockito.CALLS_REAL_METHODS);
-		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/acidades.csv"));
+		Mockito.when(cityDao.getDirectory()).thenReturn("acidades.csv");
 		new ExecComand().execute(new CityView(), cityDao, "count filter", ComandsEnum.COUNT);
 	}
 }

@@ -3,7 +3,6 @@ package selecao;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.io.File;
 import java.util.List;
 
 import org.junit.Before;
@@ -26,7 +25,7 @@ public class CSVReaderTest {
 	@Before
 	public void init() {
 		MockitoAnnotations.initMocks(this);
-		Mockito.when(daoCSV.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
+		Mockito.when(daoCSV.getDirectory()).thenReturn("cidades.csv");
 		reader = new CSVReader(daoCSV);
 
 	}
@@ -43,7 +42,7 @@ public class CSVReaderTest {
 
 	@Test(expected = DataQueryException.class)
 	public void getLinesTestNotFoundFile() throws DataQueryException  {
-		Mockito.when(daoCSV.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/notfile.csv"));
+		Mockito.when(daoCSV.getDirectory()).thenReturn("acidades.csv");
 
 		List<String> lines = reader.getLines();
 
