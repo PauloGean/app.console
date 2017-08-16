@@ -1,6 +1,6 @@
 package app.involves.controller;
 
-import app.involves.model.ComandsEnum;
+import app.involves.enums.ComandsEnum;
 
 public class ComandsSelector {
 	public static ComandsEnum getComandEnum(String input) {

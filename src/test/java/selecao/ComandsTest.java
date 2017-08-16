@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import app.involves.cmd.controller.Count;
 import app.involves.controller.ComandsSelector;
-import app.involves.model.ComandsEnum;
+import app.involves.enums.ComandsEnum;
 
 public class ComandsTest {
 	@Test

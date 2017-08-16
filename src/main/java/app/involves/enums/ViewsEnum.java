@@ -1,4 +1,4 @@
-package app.involves.model;
+package app.involves.enums;
 
 import app.involves.controller.CityController;
 import app.involves.controller.IController;

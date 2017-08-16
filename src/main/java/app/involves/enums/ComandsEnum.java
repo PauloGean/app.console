@@ -1,4 +1,4 @@
-package app.involves.model;
+package app.involves.enums;
 
 import app.involves.cmd.controller.Count;
 import app.involves.cmd.controller.CountDistinct;

@@ -1,7 +1,7 @@
 package app.involves;
 
 import app.involves.controller.IController;
-import app.involves.model.ViewsEnum;
+import app.involves.enums.ViewsEnum;
 import app.involves.view.CityView;
 import app.involves.view.Console;
 import app.involves.view.interfaces.IView;

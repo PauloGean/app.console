@@ -3,8 +3,8 @@ package app.involves.view;
 import app.involves.controller.ComandsSelector;
 import app.involves.controller.IController;
 import app.involves.dao.interfaces.IDao;
+import app.involves.enums.ComandsEnum;
 import app.involves.exceptions.ConsultDatesException;
-import app.involves.model.ComandsEnum;
 import app.involves.view.interfaces.IView;
 import app.involves.view.interfaces.IViewIO;
 
