@@ -18,18 +18,12 @@ import br.involves.model.enums.ControllersEnum;
  */
 
 public class App {
-	
-	
 
 	public static void main(String[] args) {
-		IViewIO iViewIO=new Console();
-		ControllersEnum[] enums=ControllersEnum.values();
-		iViewIO.write("Informe um arquivo para leitura");
-		for (ControllersEnum viewsEnum : enums) {
-			iViewIO.write(viewsEnum.getTitle());
-		}
-		String file=iViewIO.getInput();
-		IController controller=ControllersEnum.CITY.getController();
+		IViewIO iViewIO = new Console();
+		iViewIO.write("Arquivo SCV:");
+		iViewIO.write(ControllersEnum.CITY.getTitle());
+		IController controller = ControllersEnum.CITY.getController();
 		controller.initView();
 
 	}

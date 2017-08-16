@@ -1,5 +1,6 @@
 package selecao;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -12,5 +13,7 @@ public class ViewEnumTest {
 	public void daoEnumTest() {
 		
 	assertTrue(CityController.class.isInstance(ControllersEnum.CITY.getController()));	
+	assertEquals("Cidades",ControllersEnum.CITY.getTitle());	
+
 	}
 }

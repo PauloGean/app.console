@@ -10,6 +10,7 @@ import br.involves.cmd.enums.ComandsEnum;
 import br.involves.cmd.util.ComandsSelector;
 import br.involves.exceptions.CommandNoFoundException;
 import br.involves.impl.cmd.controller.Count;
+import br.involves.impl.cmd.controller.CountDistinct;
 
 public class ComandsTest {
 	@Test
@@ -31,6 +32,9 @@ public class ComandsTest {
 		assertTrue(ok);
 		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("count distinct capital");
 		assertEquals(ComandsEnum.COUNT_DISTINC, comandsEnum);
+		assertEquals(ComandsEnum.COUNT_DISTINC.getLabel(), comandsEnum.getLabel());
+		assertEquals(ComandsEnum.COUNT_DISTINC.getRegex(), comandsEnum.getRegex());
+		assertTrue(CountDistinct.class.isInstance(ComandsEnum.COUNT_DISTINC.getiComand()));
 	}
 
 	@Test
