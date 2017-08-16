@@ -1,16 +1,17 @@
 package br.involves.model.enums;
 
 import br.involves.api.controller.IController;
+import br.involves.cmd.util.CreateInstance;
 import br.involves.impl.controller.CityController;
 
 public enum ControllersEnum {
-	CITY("Cidades", new CityController());
+	CITY("Cidades", CityController.class);
 
-	private IController controller;
+	private Class<?> controllerClass;
 	private String title;
 
-	private ControllersEnum(String title, IController controller) {
-		this.controller = controller;
+	private ControllersEnum(String title, Class<?>  controller) {
+		this.controllerClass = controller;
 		this.title = title;
 	}
 
@@ -19,7 +20,7 @@ public enum ControllersEnum {
 	}
 
 	public IController getController() {
-		return controller;
+		return new CreateInstance<IController>().createInstance(controllerClass);
 	}
 
 }
