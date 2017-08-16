@@ -12,10 +12,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.api.csv.dao.ICSVFilter;
-import app.involves.api.csv.dao.IDaoCSV;
-import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.csv.dao.CSVFilter;
+import br.involves.api.csv.dao.ICSVFilter;
+import br.involves.api.csv.dao.IDaoCSV;
+import br.involves.exceptions.DataQueryException;
+import br.involves.impl.csv.dao.CSVFilter;
 
 public class CSVFilterTest {
 	@Mock
@@ -24,7 +24,7 @@ public class CSVFilterTest {
 	private ICSVFilter icsvFilter;
 
 	@Before
-	public void init() throws ConsultDatesException {
+	public void init() throws DataQueryException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(daoCSV.getHeader()).thenReturn("id,uf,city");
 		Mockito.when(daoCSV.getSeparator()).thenReturn(",");
@@ -42,7 +42,7 @@ public class CSVFilterTest {
 	}
 
 	@Test
-	public void filterTest() throws ConsultDatesException {
+	public void filterTest() throws DataQueryException {
 		List<String> results = icsvFilter.filter("uf", "AM");
 
 		assertEquals(2, results.size());

@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.api.csv.dao.ICSVCountDistinct;
-import app.involves.api.csv.dao.IDaoCSV;
-import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.csv.dao.CSVCountDistinct;
+import br.involves.api.csv.dao.ICSVCountDistinct;
+import br.involves.api.csv.dao.IDaoCSV;
+import br.involves.exceptions.DataQueryException;
+import br.involves.impl.csv.dao.CSVCountDistinct;
 
 public class CSVCountDistinctTest {
 	@Mock
@@ -23,7 +23,7 @@ public class CSVCountDistinctTest {
 	private ICSVCountDistinct icsvCountDistinct;
 
 	@Before
-	public void init() throws ConsultDatesException {
+	public void init() throws DataQueryException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(daoCSV.getHeader()).thenReturn("id,uf,city");
 		Mockito.when(daoCSV.getSeparator()).thenReturn(",");
@@ -41,7 +41,7 @@ public class CSVCountDistinctTest {
 	}
 
 	@Test
-	public void countDistinctTest() throws ConsultDatesException {
+	public void countDistinctTest() throws DataQueryException {
 
 		assertEquals(4, icsvCountDistinct.countDistinct("uf"));
 		assertEquals(6, icsvCountDistinct.countDistinct("id"));

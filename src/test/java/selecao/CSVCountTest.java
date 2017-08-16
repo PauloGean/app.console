@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.api.csv.dao.ICSVCount;
-import app.involves.api.csv.dao.IDaoCSV;
-import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.csv.dao.CSVCount;
+import br.involves.api.csv.dao.ICSVCount;
+import br.involves.api.csv.dao.IDaoCSV;
+import br.involves.exceptions.DataQueryException;
+import br.involves.impl.csv.dao.CSVCount;
 
 public class CSVCountTest {
 	@Mock
@@ -23,7 +23,7 @@ public class CSVCountTest {
 	private ICSVCount icsvCount;
 
 	@Before
-	public void init() throws ConsultDatesException {
+	public void init() throws DataQueryException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(daoCSV.getHeader()).thenReturn("id,uf,city");
 		Mockito.when(daoCSV.getSeparator()).thenReturn(",");
@@ -41,7 +41,7 @@ public class CSVCountTest {
 	}
 
 	@Test
-	public void countTest() throws ConsultDatesException {
+	public void countTest() throws DataQueryException {
 
 		assertEquals(4, icsvCount.count());
 

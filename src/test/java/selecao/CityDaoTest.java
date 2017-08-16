@@ -10,8 +10,8 @@ import org.junit.Test;
 import org.mockito.MockSettings;
 import org.mockito.Mockito;
 
-import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.dao.CityDao;
+import br.involves.exceptions.DataQueryException;
+import br.involves.impl.dao.CityDao;
 
 public class CityDaoTest {
 	
@@ -25,13 +25,13 @@ public class CityDaoTest {
 
 	}
 	@Test
-	public void countTest() throws ConsultDatesException {
+	public void countTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
 		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
 		assertEquals(10, cityDao.count());
 	}
 	@Test
-	public void countDistinctTest() throws ConsultDatesException {
+	public void countDistinctTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
 		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
 		assertEquals(1, cityDao.countDistinct("uf"));
@@ -39,7 +39,7 @@ public class CityDaoTest {
 	}
 	
 	@Test
-	public void filterTest() throws ConsultDatesException {
+	public void filterTest() throws DataQueryException {
 		CityDao cityDao = mock(CityDao.class,Mockito.CALLS_REAL_METHODS);
 		Mockito.when(cityDao.getDirectory()).thenReturn(new File("../selecao/src/test/resources/cidades/cidades.csv"));
 		assertEquals(10, cityDao.filter("uf", "RO").size());
