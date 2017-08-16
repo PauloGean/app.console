@@ -1,12 +1,12 @@
 package app.involves.impl.view;
 
+import app.involves.api.controller.IController;
 import app.involves.api.dao.IDao;
 import app.involves.api.view.IView;
 import app.involves.api.view.IViewIO;
-import app.involves.enums.ComandsEnum;
+import app.involves.cmd.enums.ComandsEnum;
+import app.involves.cmd.util.ComandsSelector;
 import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.controller.ComandsSelector;
-import app.involves.impl.controller.IController;
 
 public class ViewModel {
 	private static final String CMD = "cmd >";

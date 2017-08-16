@@ -1,5 +1,6 @@
 package app.involves.impl.controller;
 
+import app.involves.api.controller.IController;
 import app.involves.api.dao.IDao;
 import app.involves.api.view.IView;
 import app.involves.impl.dao.CityDao;

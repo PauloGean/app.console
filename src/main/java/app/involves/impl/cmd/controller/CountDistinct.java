@@ -1,9 +1,9 @@
-package app.involves.imp.cmd.controller;
+package app.involves.impl.cmd.controller;
 
+import app.involves.api.cmd.controller.IComand;
 import app.involves.api.dao.IDao;
 import app.involves.api.view.IViewIO;
 import app.involves.exceptions.ConsultDatesException;
-import app.involves.impl.controller.IComand;
 
 public class CountDistinct implements IComand {
 	private static final String TOTAL_DE_REGISTRO_DISTINTOS = "Total de Registro Distintos:%s";

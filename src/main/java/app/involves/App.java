@@ -1,11 +1,11 @@
 package app.involves;
 
+import app.involves.api.controller.IController;
 import app.involves.api.view.IView;
 import app.involves.api.view.IViewIO;
-import app.involves.enums.ViewsEnum;
-import app.involves.impl.controller.IController;
 import app.involves.impl.view.CityView;
 import app.involves.impl.view.Console;
+import app.involves.model.enums.ControllersEnum;
 
 /**
  *
@@ -25,13 +25,13 @@ public class App {
 
 	public static void main(String[] args) {
 		IViewIO iViewIO=new Console();
-		ViewsEnum[] enums=ViewsEnum.values();
+		ControllersEnum[] enums=ControllersEnum.values();
 		iViewIO.write("Informe um arquivo para leitura");
-		for (ViewsEnum viewsEnum : enums) {
+		for (ControllersEnum viewsEnum : enums) {
 			iViewIO.write(viewsEnum.getTitle());
 		}
 		String file=iViewIO.getInput();
-		IController controller=ViewsEnum.CITY.getController();
+		IController controller=ControllersEnum.CITY.getController();
 		controller.initView();
 
 	}

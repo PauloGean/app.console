@@ -3,7 +3,7 @@ package app.involves.impl.view;
 import java.util.Scanner;
 
 import app.involves.api.view.IViewIO;
-import app.involves.enums.ComandsEnum;
+import app.involves.cmd.enums.ComandsEnum;
 
 public class Console implements IViewIO {
 

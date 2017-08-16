@@ -1,15 +1,15 @@
-package app.involves.enums;
+package app.involves.model.enums;
 
+import app.involves.api.controller.IController;
 import app.involves.impl.controller.CityController;
-import app.involves.impl.controller.IController;
 
-public enum ViewsEnum {
+public enum ControllersEnum {
 	CITY("Cidades", new CityController());
 
 	private IController controller;
 	private String title;
 
-	private ViewsEnum(String title, IController controller) {
+	private ControllersEnum(String title, IController controller) {
 		this.controller = controller;
 		this.title = title;
 	}
