@@ -1,9 +1,9 @@
 package br.involves.impl.csv.dao;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +23,16 @@ public class CSVReader implements ICSVReader {
 
 		try {
 		    ClassLoader classLoader = getClass().getClassLoader();
-		    String strFile=classLoader.getResource(daoCSV.getDirectory()).getFile();
-			list = Files.readAllLines(new File(strFile).toPath(), StandardCharsets.UTF_8);
+		    try (InputStream inputStream = classLoader.getResource(daoCSV.getDirectory()).openStream()) {
+		        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"UTF-8"));
+		        String line;
+		        while ((line = bufferedReader.readLine()) != null) {
+		        	list.add(line);
+		        }
+		        inputStream.close();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    }
 		} catch (Exception e) {
 			throw new DataQueryException(daoCSV.getDirectory(),e);
 		}
