@@ -34,6 +34,7 @@ public class CityControllerTest {
 
 	@Test
 	public void instanceTest() {
+		cityController=new  CityController();
 		assertTrue(CityView.class.isInstance(cityController.getView()));
 		assertTrue(CityDao.class.isInstance(cityController.getDao()));
 	}

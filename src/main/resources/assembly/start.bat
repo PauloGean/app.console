@@ -1,0 +1,1 @@
+java -jar -Xms20m -Xmx20m  selecao-${project.version}.jar
