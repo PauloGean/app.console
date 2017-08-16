@@ -4,11 +4,13 @@ import br.involves.api.view.IView;
 import br.involves.api.view.IViewIO;
 
 public class CityView implements IView {
+	private Console console;
 	public CityView() {
+		console=new Console();
 	}
 	
 	public IViewIO getViewIO() {
-		return new Console();
+		return console;
 	}
 
 	@Override
@@ -18,7 +20,7 @@ public class CityView implements IView {
 
 	@Override
 	public String getInput() {
-		return new Console().getInput();
+		return console.getInput();
 	}
 
 
