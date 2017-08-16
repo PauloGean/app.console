@@ -1,12 +1,12 @@
 package br.involves.cmd.enums;
 
-import br.involves.api.cmd.controller.IComand;
+import br.involves.api.cmd.controller.ICommand;
 import br.involves.cmd.util.CreateInstance;
 import br.involves.impl.cmd.controller.Count;
 import br.involves.impl.cmd.controller.CountDistinct;
 import br.involves.impl.cmd.controller.Filter;
 
-public enum ComandsEnum {
+public enum CommandsEnum {
 
 	COUNT("count [*]","count *",Count.class)	, 
 	COUNT_DISTINC("count distinct .*","count distinct [propriedade]",CountDistinct.class), 
@@ -16,7 +16,7 @@ public enum ComandsEnum {
 	private String label;
 	private Class<?> classeComand;
 
-	private ComandsEnum(String regex,String label,Class<?> iComand) {
+	private CommandsEnum(String regex,String label,Class<?> iComand) {
 		this.regex = regex;
 		this.label = label;
 		this.classeComand=iComand;
@@ -31,8 +31,8 @@ public enum ComandsEnum {
 		return label;
 	}
 
-	public IComand getiComand() {
-		return new CreateInstance<IComand>().createInstance(classeComand);
+	public ICommand getiComand() {
+		return new CreateInstance<ICommand>().createInstance(classeComand);
 	}
 	
 	

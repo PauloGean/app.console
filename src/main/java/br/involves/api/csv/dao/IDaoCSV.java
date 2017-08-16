@@ -1,6 +1,5 @@
 package br.involves.api.csv.dao;
 
-import java.io.File;
 import java.util.List;
 
 import br.involves.exceptions.DataQueryException;

@@ -1,6 +1,6 @@
 package br.involves.impl.cmd.controller;
 
-import br.involves.cmd.enums.ComandsEnum;
+import br.involves.cmd.enums.CommandsEnum;
 
 public class Header {
 	private static final String N = "\n";
@@ -9,11 +9,11 @@ public class Header {
 	private static final String INFOME_UM_COMANDO = "=====Infome um comando=====";
 
 	public String toString() {
-		ComandsEnum[] comandsEnum = ComandsEnum.values();
+		CommandsEnum[] comandsEnum = CommandsEnum.values();
 		StringBuffer buffer=new StringBuffer();
 		buffer.append(INFOME_UM_COMANDO);
 		buffer.append(N);
-		for (ComandsEnum comand : comandsEnum) {
+		for (CommandsEnum comand : comandsEnum) {
 			buffer.append(comand.getLabel());
 			buffer.append(N);
 		}

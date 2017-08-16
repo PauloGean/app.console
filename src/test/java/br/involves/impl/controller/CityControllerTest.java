@@ -8,14 +8,14 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.involves.impl.cmd.controller.ComandWait;
+import br.involves.impl.cmd.controller.CommandWait;
 import br.involves.impl.dao.CityDao;
 import br.involves.impl.view.CityView;
 import br.involves.impl.view.Console;
 
 public class CityControllerTest {
 	@Mock
-	ComandWait comandWait;
+	CommandWait comandWait;
 	@Mock
 	CityController cityController;
 	
