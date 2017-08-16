@@ -5,9 +5,10 @@ import static org.mockito.Mockito.mock;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import br.involves.cmd.enums.CommandsEnum;
-import br.involves.impl.dao.CityDao;
-import br.involves.impl.view.CityView;
+import br.pgrl.reader.cmd.enums.CommandsEnum;
+import br.pgrl.reader.impl.cmd.controller.ExecComand;
+import br.pgrl.reader.impl.dao.CityDao;
+import br.pgrl.reader.impl.view.CityView;
 
 public class ExecComandTest {
 	@Test

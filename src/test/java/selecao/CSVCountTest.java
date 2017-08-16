@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.involves.api.csv.dao.ICSVCount;
-import br.involves.api.csv.dao.IDaoCSV;
-import br.involves.exceptions.DataQueryException;
-import br.involves.impl.csv.dao.CSVCount;
+import br.pgrl.reader.api.csv.dao.ICSVCount;
+import br.pgrl.reader.api.csv.dao.IDaoCSV;
+import br.pgrl.reader.exceptions.DataQueryException;
+import br.pgrl.reader.impl.csv.dao.CSVCount;
 
 public class CSVCountTest {
 	@Mock
@@ -30,7 +30,7 @@ public class CSVCountTest {
 		List<String> lines = new ArrayList<String>();
 		lines.add("id,uf,city");
 		lines.add("01,AM,Manaus");
-		lines.add("02,PA,Belém");
+		lines.add("02,PA,Belï¿½m");
 		lines.add("03,SP,Araraquara");
 		lines.add("04,SC,Brusque");
 

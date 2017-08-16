@@ -4,6 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import br.pgrl.reader.cmd.util.CreateInstance;
+
 public class CreateInstanceTest {
 	@Test
 	public void createInstanceTest() {

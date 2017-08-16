@@ -6,11 +6,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import br.involves.cmd.enums.CommandsEnum;
-import br.involves.cmd.util.CommandsSelector;
-import br.involves.exceptions.CommandNoFoundException;
-import br.involves.impl.cmd.controller.Count;
-import br.involves.impl.cmd.controller.CountDistinct;
+import br.pgrl.reader.cmd.enums.CommandsEnum;
+import br.pgrl.reader.cmd.util.CommandsSelector;
+import br.pgrl.reader.exceptions.CommandNoFoundException;
+import br.pgrl.reader.impl.cmd.controller.Count;
+import br.pgrl.reader.impl.cmd.controller.CountDistinct;
 
 public class ComandsTest {
 	@Test

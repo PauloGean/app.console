@@ -8,10 +8,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.involves.impl.cmd.controller.CommandWait;
-import br.involves.impl.dao.CityDao;
-import br.involves.impl.view.CityView;
-import br.involves.impl.view.Console;
+import br.pgrl.reader.impl.cmd.controller.CommandWait;
+import br.pgrl.reader.impl.controller.CityController;
+import br.pgrl.reader.impl.dao.CityDao;
+import br.pgrl.reader.impl.view.CityView;
+import br.pgrl.reader.impl.view.Console;
 
 public class CityControllerTest {
 	@Mock

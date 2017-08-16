@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.involves.api.csv.dao.ICSVReader;
-import br.involves.api.csv.dao.IDaoCSV;
-import br.involves.exceptions.DataQueryException;
-import br.involves.impl.csv.dao.CSVReader;
+import br.pgrl.reader.api.csv.dao.ICSVReader;
+import br.pgrl.reader.api.csv.dao.IDaoCSV;
+import br.pgrl.reader.exceptions.DataQueryException;
+import br.pgrl.reader.impl.csv.dao.CSVReader;
 
 public class CSVReaderTest {
 	@Mock
@@ -36,7 +36,7 @@ public class CSVReaderTest {
 		List<String> lines = reader.getLines();
 		assertEquals(11, lines.size());
 		boolean contains = lines.contains(
-				"1100106,RO,Guajará-Mirim,,-65.3239518197,-10.7738837407,Guajara-Mirim,,Guajará-Mirim,Madeira-Guaporé");
+				"1100106,RO,Guajarï¿½-Mirim,,-65.3239518197,-10.7738837407,Guajara-Mirim,,Guajarï¿½-Mirim,Madeira-Guaporï¿½");
 		assertTrue(contains);
 	}
 

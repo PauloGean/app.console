@@ -5,8 +5,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import br.involves.impl.controller.CityController;
-import br.involves.model.enums.ControllersEnum;
+import br.pgrl.reader.impl.controller.CityController;
+import br.pgrl.reader.model.enums.ControllersEnum;
 
 public class ViewEnumTest {
 	@Test

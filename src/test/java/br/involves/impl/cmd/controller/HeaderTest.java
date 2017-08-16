@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import br.pgrl.reader.impl.cmd.controller.Header;
+
 public class HeaderTest {
 	@Test
 	public void stringTest() {

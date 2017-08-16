@@ -8,9 +8,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.involves.api.csv.dao.ICSVColumn;
-import br.involves.api.csv.dao.IDaoCSV;
-import br.involves.impl.csv.dao.CSVColumn;
+import br.pgrl.reader.api.csv.dao.ICSVColumn;
+import br.pgrl.reader.api.csv.dao.IDaoCSV;
+import br.pgrl.reader.impl.csv.dao.CSVColumn;
 
 public class CSVColumnTest {
 	@Mock

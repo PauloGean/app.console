@@ -10,8 +10,8 @@ import org.junit.Test;
 import org.mockito.MockSettings;
 import org.mockito.Mockito;
 
-import br.involves.exceptions.DataQueryException;
-import br.involves.impl.dao.CityDao;
+import br.pgrl.reader.exceptions.DataQueryException;
+import br.pgrl.reader.impl.dao.CityDao;
 
 public class CityDaoTest {
 	
