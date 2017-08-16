@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import app.involves.cmd.controller.Count;
-import app.involves.controller.ComandsSelector;
 import app.involves.enums.ComandsEnum;
+import app.involves.imp.cmd.controller.Count;
+import app.involves.impl.controller.ComandsSelector;
 
 public class ComandsTest {
 	@Test

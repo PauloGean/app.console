@@ -12,10 +12,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.csv.dao.CSVReader;
-import app.involves.dao.interfaces.ICSVReader;
-import app.involves.dao.interfaces.IDaoCSV;
+import app.involves.api.csv.dao.ICSVReader;
+import app.involves.api.csv.dao.IDaoCSV;
 import app.involves.exceptions.ConsultDatesException;
+import app.involves.impl.csv.dao.CSVReader;
 
 public class CSVReaderTest {
 	@Mock

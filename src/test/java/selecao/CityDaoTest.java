@@ -10,8 +10,8 @@ import org.junit.Test;
 import org.mockito.MockSettings;
 import org.mockito.Mockito;
 
-import app.involves.dao.CityDao;
 import app.involves.exceptions.ConsultDatesException;
+import app.involves.impl.dao.CityDao;
 
 public class CityDaoTest {
 	

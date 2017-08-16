@@ -11,10 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import app.involves.csv.dao.CSVCountDistinct;
-import app.involves.dao.interfaces.ICSVCountDistinct;
-import app.involves.dao.interfaces.IDaoCSV;
+import app.involves.api.csv.dao.ICSVCountDistinct;
+import app.involves.api.csv.dao.IDaoCSV;
 import app.involves.exceptions.ConsultDatesException;
+import app.involves.impl.csv.dao.CSVCountDistinct;
 
 public class CSVCountDistinctTest {
 	@Mock

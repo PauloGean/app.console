@@ -1,9 +1,9 @@
 package app.involves.enums;
 
-import app.involves.cmd.controller.Count;
-import app.involves.cmd.controller.CountDistinct;
-import app.involves.cmd.controller.Filter;
-import app.involves.controller.IComand;
+import app.involves.imp.cmd.controller.Count;
+import app.involves.imp.cmd.controller.CountDistinct;
+import app.involves.imp.cmd.controller.Filter;
+import app.involves.impl.controller.IComand;
 
 public enum ComandsEnum {
 

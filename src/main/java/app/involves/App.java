@@ -1,11 +1,11 @@
 package app.involves;
 
-import app.involves.controller.IController;
+import app.involves.api.view.IView;
+import app.involves.api.view.IViewIO;
 import app.involves.enums.ViewsEnum;
-import app.involves.view.CityView;
-import app.involves.view.Console;
-import app.involves.view.interfaces.IView;
-import app.involves.view.interfaces.IViewIO;
+import app.involves.impl.controller.IController;
+import app.involves.impl.view.CityView;
+import app.involves.impl.view.Console;
 
 /**
  *

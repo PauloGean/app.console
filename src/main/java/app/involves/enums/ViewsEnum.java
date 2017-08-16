@@ -1,7 +1,7 @@
 package app.involves.enums;
 
-import app.involves.controller.CityController;
-import app.involves.controller.IController;
+import app.involves.impl.controller.CityController;
+import app.involves.impl.controller.IController;
 
 public enum ViewsEnum {
 	CITY("Cidades", new CityController());
