@@ -1,8 +1,7 @@
 package br.involves.api.view;
 
 public interface IView {
-	public IViewIO getViewIO();
-	public void initView();
+	public String getInput();
 	
-
+    public void show(String msg);
 }

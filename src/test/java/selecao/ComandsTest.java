@@ -8,11 +8,12 @@ import org.junit.Test;
 
 import br.involves.cmd.enums.ComandsEnum;
 import br.involves.cmd.util.ComandsSelector;
+import br.involves.exceptions.CommandNoFoundException;
 import br.involves.impl.cmd.controller.Count;
 
 public class ComandsTest {
 	@Test
-	public void comandCountTest() {
+	public void comandCountTest() throws CommandNoFoundException {
 		boolean ok = "count *".matches(ComandsEnum.COUNT.getRegex());
 		assertTrue(ok);
 		
@@ -25,7 +26,7 @@ public class ComandsTest {
 	}
 
 	@Test
-	public void comandDistinctTest() {
+	public void comandDistinctTest() throws CommandNoFoundException {
 		boolean ok = "count distinct a".matches(ComandsEnum.COUNT_DISTINC.getRegex());
 		assertTrue(ok);
 		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("count distinct capital");
@@ -33,15 +34,15 @@ public class ComandsTest {
 	}
 
 	@Test
-	public void filterTest() {
+	public void filterTest() throws CommandNoFoundException {
 		boolean ok = "filter a a".matches(ComandsEnum.FILTER.getRegex());
 		assertTrue(ok);
 		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("filter capital true");
 		assertEquals(ComandsEnum.FILTER, comandsEnum);
 	}
 	
-	@Test
-	public void noComandTest() {
+	@Test(expected = CommandNoFoundException.class)
+	public void noComandTest() throws CommandNoFoundException {
 
 		ComandsEnum comandsEnum=	ComandsSelector.getComandEnum("aa aa aa");
 		assertNull(comandsEnum);

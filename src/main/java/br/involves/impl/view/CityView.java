@@ -7,17 +7,19 @@ public class CityView implements IView {
 	public CityView() {
 	}
 	
-	@Override
 	public IViewIO getViewIO() {
 		return new Console();
 	}
+
 	@Override
-	public void initView() {
-		
+	public void show(String msg) {
+		getViewIO().write(msg);
 	}
 
-	
-
+	@Override
+	public String getInput() {
+		return new Console().getInput();
+	}
 
 
 }
