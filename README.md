@@ -21,6 +21,6 @@ Executando o app
 
 - Após o Java e o Maven instalado. Entrar no diretório raiz e executar o comando **mvn install**.
 - Será gerado um arquivo zipado dentro do diretório **/target/[arquivo].zip**.
-- Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script **start.bat** , para SO Windows ou **start.sh** para SO Linux.
+- Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script **start.bat**   caso  SO Windows ou **start.sh** para SO Linux.
 
 
