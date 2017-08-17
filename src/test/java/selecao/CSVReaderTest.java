@@ -36,7 +36,7 @@ public class CSVReaderTest {
 		List<String> lines = reader.getLines();
 		assertEquals(11, lines.size());
 		boolean contains = lines.contains(
-				"1100106,RO,Guajar�-Mirim,,-65.3239518197,-10.7738837407,Guajara-Mirim,,Guajar�-Mirim,Madeira-Guapor�");
+				"1100106,RO,Guajará-Mirim,,-65.3239518197,-10.7738837407,Guajara-Mirim,,Guajará-Mirim,Madeira-Guaporé");
 		assertTrue(contains);
 	}
 
