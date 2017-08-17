@@ -9,7 +9,7 @@ public class CommandNoFoundException extends Exception {
 	
     public CommandNoFoundException(String cmd)
     {
-      super(String.format("Comando n�o encontrado: %s", cmd));
+      super(String.format("Comando não encontrado: %s", cmd));
     }
 
 }
