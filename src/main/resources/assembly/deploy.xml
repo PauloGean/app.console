@@ -25,7 +25,7 @@
 		<dependencySet>
 			<useProjectArtifact>true</useProjectArtifact>
 			<includes>
-				<include>br.involves:selecao:jar</include>
+				<include>br.pgrl:csvReader:jar</include>
 			</includes>
 			<outputDirectory></outputDirectory>
 		</dependencySet>
