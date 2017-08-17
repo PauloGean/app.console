@@ -1,1 +1,1 @@
-java -jar -Xms20m -Xmx20m  selecao-${project.version}.jar
+java -jar -Xms20m -Xmx20m  csvReader-${project.version}.jar
