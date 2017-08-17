@@ -2,11 +2,6 @@ App CSV Reader
 ===================
 
 
-Olá, estamos muito felizes pelo seu interesse em fazer parte da nossa equipe de desenvolvimento. Gostaríamos de conhecer um pouco mais das suas habilidades com **Java** e, para isso, preparamos o teste abaixo.
-
-----------
-
-
 Sobre
 -------------
 
@@ -18,14 +13,14 @@ Alguns comandos:
 
 Requisitos
 -------------
--maven
--java jdk 8
+- maven
+- java jdk 8
 
 Executando o app
 -------------
 
--Após o java e o maven instalado. Entrar no diretório raiz e executar o comando **mvn install**.
--Será gerado um arquivo zipado dentro do diretório /target/[arquivo].zip.
--Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script start.bat , para SO Windows ou start.sh para SO Linux.
+- Após o java e o maven instalado. Entrar no diretório raiz e executar o comando **mvn install**.
+- Será gerado um arquivo zipado dentro do diretório /target/[arquivo].zip.
+- Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script start.bat , para SO Windows ou start.sh para SO Linux.
 
 
