@@ -13,14 +13,14 @@ Alguns comandos:
 
 Requisitos
 -------------
-- maven
-- java jdk 8
+- Maven
+- Java (jdk 8)
 
 Executando o app
 -------------
 
-- Após o java e o maven instalado. Entrar no diretório raiz e executar o comando **mvn install**.
-- Será gerado um arquivo zipado dentro do diretório /target/[arquivo].zip.
-- Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script start.bat , para SO Windows ou start.sh para SO Linux.
+- Após o Java e o Maven instalado. Entrar no diretório raiz e executar o comando **mvn install**.
+- Será gerado um arquivo zipado dentro do diretório **/target/[arquivo].zip**.
+- Descompactar o arquivo entrar dentro do diretórios descompactado e executar o script **start.bat** , para SO Windows ou **start.sh** para SO Linux.
 
 
